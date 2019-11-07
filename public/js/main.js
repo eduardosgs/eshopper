@@ -1,12 +1,15 @@
 /*price range*/
 
-if ($.fn.slider) {
-    $('#sl2').slider();
-}
+
 
 /*scroll to top*/
 
 $(document).ready(function () {
+
+    if ($.fn.slider) {
+        $('#sl2').slider();
+    }
+
     $(function () {
         $.scrollUp({
             scrollName: 'scrollUp', // Element ID

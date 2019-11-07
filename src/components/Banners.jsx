@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '../assets/images/home/logo.png'
 
 const Banners = () => {
 
