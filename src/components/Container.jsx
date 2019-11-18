@@ -34,6 +34,7 @@ class Products extends Component {
 
 	render() {
 		const { isLoaded, products } = this.state;
+		console.log(products)
 
 		if (!isLoaded) {
 			return <div>Loading...</div>;
@@ -55,9 +56,9 @@ class Products extends Component {
 									<div className="product-image-wrapper">
 									<div className="single-products">
 											<div className="productinfo text-center">
-												<img src="images/home/product1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src={'http://painel.supplementstore.com.br/uploads/Creatina/'+products.arquivo} alt="" />
+												<h2>{products.preco}</h2>
+												<p>{products.nomeproduto}</p>
 												<a href="#" className="btn btn-default add-to-cart"><i className="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											<div className="product-overlay">
