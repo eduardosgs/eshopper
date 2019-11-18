@@ -16,18 +16,7 @@ class App extends Component {
     super(props);
     this.state = {
       date: new Date(),
-      products: null
     };
-  }
-
-  componentDidMount() {
-    fetch('http://www.painel.supplementstore.com.br/public/api/produtos')
-    .then(res => res.json())
-    .then((data) => {
-      this.setState({ products: data })
-      console.log(this.state)
-    })
-    .catch(console.log(this.state))
   }
 
   render() {
