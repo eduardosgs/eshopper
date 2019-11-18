@@ -9,6 +9,7 @@ import Header from './components/Header'
 import Banners from './components/Banners'
 import Container from './components/Container'
 import Footer from './components/Footer'
+import CreatLogin from './components/CreateLogin';
 
 class App extends Component {
 
@@ -25,6 +26,7 @@ class App extends Component {
         <Header />
         <Banners />
         <Container />
+        <CreatLogin />
         <Footer />
       </div>
     )
