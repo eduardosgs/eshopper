@@ -10,6 +10,7 @@ import Banners from './components/Banners'
 import Container from './components/Container'
 import Footer from './components/Footer'
 import CreatLogin from './components/CreateLogin';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 class App extends Component {
 
@@ -25,8 +26,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <Banners />
-        <Container />
-        <CreatLogin />
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact={true} component={Container} />
+          </Switch>
+        </BrowserRouter>
         <Footer />
       </div>
     )
