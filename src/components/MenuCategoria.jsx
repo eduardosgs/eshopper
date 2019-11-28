@@ -25,7 +25,7 @@ class Category extends Component {
                     <div className="panel panel-default">
                         {this.state.category.map(categoria => (
                             <div className="panel-heading">
-                                <h4 className="panel-title">{categoria.nomecategoria}<a href="#"></a></h4>
+                                <h4 className="panel-title"><a href="#">{categoria.nomecategoria}</a></h4>
                             </div>
                         ))}
                     </div>

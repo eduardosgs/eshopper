@@ -1,17 +1,12 @@
 import React from 'react'
-const img = (categoria, product) => {
+const img = (categoria, product, nomecategoria, arquivoproduto) => {
 
-    product.map(produtos => {
-        categoria.map(category => {
-            if (category.id == produtos.categoria_id) {
-                return document.getElementById("minhaImagem").src = [`http://painel.supplementstore.com.br/uploads/${category.nomecategoria}/${produtos.arquivo}`];
-            } else {
-                return false;
-            }
-        })
+    if (categoria == product) {
+        return <img src={`http://painel.supplementstore.com.br/uploads/${nomecategoria}/${arquivoproduto}`} />;
+    } else {
+        return false;
+    }
 
-    })
-    return this;
 }
 
 export default img

@@ -4,12 +4,11 @@ import './assets/css/font-awesome.min.css'
 import './assets/css/animate.css'
 import './assets/css/price-range.css'
 import './assets/css/responsive.css'
+import './assets/css/main.css'
 import Header from './components/Header'
-import Banners from './components/Banners'
-import Container from './components/Container'
 import Footer from './components/Footer'
-import CreatLogin from './components/CreateLogin';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Route from './routes'
+
 
 class App extends Component {
 
@@ -24,12 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Banners />
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact={true} component={Container} />
-          </Switch>
-        </BrowserRouter>
+        <Route />
         <Footer />
       </div>
     )

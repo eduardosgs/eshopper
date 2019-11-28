@@ -1,5 +1,17 @@
 import React from 'react'
 import Logo from '../assets/images/home/logo.png'
+import CreateLogin from "../components/CreateLogin"
+import { Link } from 'react-router-dom'
+
+function clientes(cliente) {
+    if (cliente) {
+
+        var user = JSON.parse(cliente);
+        return " Bem vindo: " + user.cliente.nome;
+    }
+
+}
+
 
 const Header = () => {
 
@@ -13,6 +25,7 @@ const Header = () => {
                                 <ul className="nav nav-pills">
                                     <li><a href="#"><i className="fa fa-phone"></i> +2 95 01 88 821</a></li>
                                     <li><a href="#"><i className="fa fa-envelope"></i> info@domain.com</a></li>
+                                    <li><a href="#">{clientes(sessionStorage.getItem('cliente'))}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -30,7 +43,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            
+
             <div className="header-middle">
                 <div className="container">
                     <div className="row">
@@ -49,7 +62,7 @@ const Header = () => {
                                         <li><a href="">UK</a></li>
                                     </ul>
                                 </div>
-                                
+
                                 <div className="btn-group">
                                     <button type="button" className="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
                                         DOLLAR
@@ -69,14 +82,16 @@ const Header = () => {
                                     <li><a href=""><i className="fa fa-star"></i> Wishlist</a></li>
                                     <li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
                                     <li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Cart</a></li>
-                                    <li><a href="login.html"><i className="fa fa-lock"></i> Login</a></li>
+                                    <li><a href={"/createlogin"}><i className="fa fa-lock"></i> Login</a></li>
+
+
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        
+
             <div className="header-bottom">
                 <div className="container">
                     <div className="row">
@@ -91,30 +106,16 @@ const Header = () => {
                             </div>
                             <div className="mainmenu pull-left">
                                 <ul className="nav navbar-nav collapse navbar-collapse">
-                                    <li><a href="index.html" className="active">Home</a></li>
-                                    <li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down"></i></a>
-                                        <ul role="menu" className="sub-menu">
-                                            <li><a href="shop.html">Products</a></li>
-                                            <li><a href="product-details.html">Product Details</a></li> 
-                                            <li><a href="checkout.html">Checkout</a></li> 
-                                            <li><a href="cart.html">Cart</a></li> 
-                                            <li><a href="login.html">Login</a></li> 
-                                        </ul>
-                                    </li> 
-                                    <li className="dropdown"><a href="#">Blog<i className="fa fa-angle-down"></i></a>
-                                        <ul role="menu" className="sub-menu">
-                                            <li><a href="blog.html">Blog List</a></li>
-                                            <li><a href="blog-single.html">Blog Single</a></li>
-                                        </ul>
-                                    </li> 
-                                    <li><a href="404.html">404</a></li>
+                                    <li><a href={'/'} className="active">Home</a></li>
+
+
                                     <li><a href="contact-us.html">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-sm-3">
                             <div className="search_box pull-right">
-                                <input type="text" placeholder="Search"/>
+                                <input type="text" placeholder="Search" />
                             </div>
                         </div>
                     </div>
