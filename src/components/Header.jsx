@@ -52,27 +52,6 @@ const Header = () => {
                                 <a href="index.html"><img src={Logo} alt="" /></a>
                             </div>
                             <div className="btn-group pull-right clearfix">
-                                <div className="btn-group">
-                                    <button type="button" className="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                        USA
-                                        <span className="caret"></span>
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li><a href="">Canada</a></li>
-                                        <li><a href="">UK</a></li>
-                                    </ul>
-                                </div>
-
-                                <div className="btn-group">
-                                    <button type="button" className="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                        DOLLAR
-                                        <span className="caret"></span>
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li><a href="">Canadian Dollar</a></li>
-                                        <li><a href="">Pound</a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                         <div className="col-md-8 clearfix">

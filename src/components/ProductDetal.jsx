@@ -39,8 +39,13 @@ function pagina(params) {
     }
 }
 
+
+
 export default class ProductDetal extends Component {
     state = {
+        arquivo: "",
+        nomecategoria: "",
+        nomeproduto: "",
         produtos_id: "",
         clientes_id: "",
         valor: "",
@@ -69,6 +74,9 @@ export default class ProductDetal extends Component {
             return product.preco
         }
         const vendas = {
+            arquivo: this.state.product.arquivo,
+            nomecategoria: this.state.category.nomecategoria,
+            nomeproduto: this.state.product.nomeproduto,
             tipo_pagamento: this.state.tipo_pagamento,
             quantidade: this.state.quantidade,
             produtos_id: this.state.product.id,
@@ -80,7 +88,8 @@ export default class ProductDetal extends Component {
             .then(function (response) {
                 console.log(response.data)
                 localStorage.setItem('vendas', JSON.stringify(response.data));
-                window.location.href = '/';
+                sessionStorage.setItem('produto', JSON.stringify(vendas));
+                window.location.href = '/carrinho';
             }).catch(err => {
                 console.log(err);
             })

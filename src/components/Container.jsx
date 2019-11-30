@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 function alert(params) {
 	const ms = JSON.parse(params);
 
-	alert(ms.message);
+	//alert(ms.message);
 	//localStorage.removeItem('vendas')
 
 
@@ -31,7 +31,7 @@ class Products extends Component {
 
 	loadProduct = async () => {
 		const response = await api.get('/produtos');
-		this.setState({ product: response.data.produtos });;
+		this.setState({ product: response.data.produtos });
 
 	}
 
