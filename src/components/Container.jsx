@@ -24,15 +24,18 @@ class Products extends Component {
     this.loadProduct();
   }
 
+
   loadProduct = async () => {
     const response = await api.get("/produtos");
     this.setState({ product: response.data.produtos });
   };
 
+
   loadCategory = async () => {
     const response = await api.get("/categoria");
     this.setState({ category: response.data.categoria });
   };
+
 
   render() {
     return (
@@ -78,6 +81,7 @@ class Products extends Component {
       </div>
     );
   }
+
 }
 class Container extends Component {
   constructor(props) {
